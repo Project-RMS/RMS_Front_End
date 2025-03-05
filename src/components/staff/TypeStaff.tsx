@@ -58,7 +58,18 @@ export const menu: MenuItem[] = [
 
 
 
-
+export interface Table {
+    id: number;
+    name: string;
+    status: "available" | "occupied" | "reserved";
+    seats: number;
+  }
+  
+  export interface TableCategory {
+    id: number;
+    name: string;
+    tables: Table[];
+  }
 // Types for menu items and favorite categories
 interface MenuItems {
     name: string;

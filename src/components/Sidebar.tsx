@@ -3,7 +3,8 @@
 
 
 
-import { ChefHat, Users, ClipboardList, Settings, BarChart3, LogOut, X } from 'lucide-react';
+// import { ChefHat, Users, ClipboardList, Settings, BarChart3, LogOut, X } from 'lucide-react';
+import { ChefHat, Users, ClipboardList, Settings, BarChart3, LogOut, X, Clock } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -14,12 +15,17 @@ interface SidebarProps {
 const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   const location = useLocation(); // Get the current route
 
+ 
   const menuItems = [
-    { icon: BarChart3, label: 'Table Management', path: '/' },
-    { icon: ClipboardList, label: 'Menus', path: '/orders' },
-    { icon: ChefHat, label: 'Inventory', path: '/kitchen' },
-    { icon: Users, label: 'Staff', path: '/staff' },
-    { icon: Settings, label: 'Settings', path: '/settings' },
+    { icon: BarChart3, label: 'Table Management', path: '/' }, // Already good - BarChart3 fits analytics/management
+    { icon: ClipboardList, label: 'Menus', path: '/orders' }, // Already good - ClipboardList fits for menu lists
+    { icon: ChefHat, label: 'Operations', path: '/operation' }, // Already good - ChefHat fits kitchen operations
+    { icon: BarChart3, label: 'Reports', path: '/reports' }, // Changed to BarChart3 for reporting/analytics
+    { icon: BarChart3, label: 'Inventory', path: '/inventory' }, // Changed to BarChart3 for reporting/inventory
+    { icon: Clock, label: 'Day End', path: '/datend' }, // Changed to Clock as it relates to time/day ending
+    { icon: Users, label: 'Staff', path: '/staff' }, // Already good - Users fits for staff management
+    { icon: Settings, label: 'Settings', path: '/settings' }, // Already good - Settings is perfect
+    { icon: LogOut, label: 'Logout', path: '/logout' }, // Changed to LogOut to match the logout action
   ];
 
   return (
