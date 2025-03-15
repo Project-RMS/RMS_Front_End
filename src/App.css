@@ -1,0 +1,15 @@
+.inventory-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 16rem;
+    /* Adjust the width as needed */
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    /* Ensure it's above other content */
+}
+
+
+
